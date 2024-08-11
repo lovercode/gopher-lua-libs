@@ -1,11 +1,13 @@
 package http
 
 import (
+	"context"
 	"crypto/tls"
 	"crypto/x509"
 	"encoding/json"
 	"io/ioutil"
 	"log"
+	"net"
 	"net/http"
 	"net/http/cookiejar"
 	"net/http/httputil"
@@ -84,24 +86,47 @@ func checkClient(L *lua.LState) *LuaClient {
 // http.client(config) returns (user data, error)
 // config table:
 //
-//	{
-//	  proxy="http(s)://<user>:<password>@host:<port>",
-//	  timeout= 10,
-//	  insecure_ssl=false,
-//	  user_agent = "gopher-lua",
-//	  basic_auth_user = "",
-//	  basic_auth_password = "",
-//	  headers = {"key"="value"},
-//	  debug = false,
-//	}
+//		{
+//		  proxy="http(s)://<user>:<password>@host:<port>",
+//		  timeout= 10,
+//		  insecure_ssl=false,
+//		  user_agent = "gopher-lua",
+//		  basic_auth_user = "",
+//		  basic_auth_password = "",
+//		  headers = {"key"="value"},
+//		  debug = false,
+//		  use_sock = false,
+//	      sock_addr = "/var/run/docker.sock",
+//		}
 func New(L *lua.LState) int {
 	var config *lua.LTable
 	if L.GetTop() > 0 {
 		config = L.CheckTable(1)
 	}
-	client := &LuaClient{Client: &http.Client{Timeout: DefaultTimeout}, userAgent: DefaultUserAgent}
-	tlsConfig := &tls.Config{}
 	transport := &http.Transport{}
+	var httpClient = &http.Client{
+		Timeout:   DefaultTimeout,
+		Transport: transport,
+	}
+	if config != nil {
+		useSock := L.GetField(config, `use_sock`)
+		sockAddr := L.GetField(config, `sock_addr`)
+		needUseSock, ok := useSock.(lua.LBool)
+		if useSock != lua.LNil && !ok {
+			L.ArgError(1, "use_sock must be bool")
+		}
+		sockAddrStr, ok := sockAddr.(lua.LString)
+		if sockAddr != lua.LNil && !ok {
+			L.ArgError(1, "sock_addr must be string")
+		}
+		if needUseSock && len(sockAddrStr) > 0 {
+			transport.DialContext = func(ctx context.Context, network, addr string) (net.Conn, error) {
+				return net.Dial("unix", sockAddrStr.String())
+			}
+		}
+	}
+	client := &LuaClient{Client: httpClient, userAgent: DefaultUserAgent}
+	tlsConfig := &tls.Config{}
 	// parse env
 	if proxyEnv := os.Getenv(`HTTP_PROXY`); proxyEnv != `` {
 		proxyUrl, err := url.Parse(proxyEnv)
