@@ -5,7 +5,6 @@ import (
 	"crypto/tls"
 	"crypto/x509"
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 	"log"
 	"net"
@@ -109,7 +108,6 @@ func New(L *lua.LState) int {
 		Timeout:   DefaultTimeout,
 		Transport: transport,
 	}
-	fmt.Println("new client")
 	if config != nil {
 		useSock := L.GetField(config, `use_sock`)
 		sockAddr := L.GetField(config, `sock_addr`)
