@@ -1,13 +1,13 @@
 package chef_test
 
 import (
+	"github.com/lovercode/gopher-lua-libs/tests"
 	"github.com/stretchr/testify/assert"
-	"github.com/vadv/gopher-lua-libs/tests"
 	"testing"
 
-	chef "github.com/vadv/gopher-lua-libs/chef"
-	http "github.com/vadv/gopher-lua-libs/http"
-	inspect "github.com/vadv/gopher-lua-libs/inspect"
+	chef "github.com/lovercode/gopher-lua-libs/chef"
+	http "github.com/lovercode/gopher-lua-libs/http"
+	inspect "github.com/lovercode/gopher-lua-libs/inspect"
 )
 
 func TestApi(t *testing.T) {

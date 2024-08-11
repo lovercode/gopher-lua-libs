@@ -1,11 +1,11 @@
 package cmd
 
 import (
+	"github.com/lovercode/gopher-lua-libs/tests"
 	"github.com/stretchr/testify/assert"
-	"github.com/vadv/gopher-lua-libs/tests"
 	"testing"
 
-	runtime "github.com/vadv/gopher-lua-libs/runtime"
+	runtime "github.com/lovercode/gopher-lua-libs/runtime"
 )
 
 func TestApi(t *testing.T) {

@@ -1,9 +1,9 @@
 package yaml
 
 import (
+	"github.com/lovercode/gopher-lua-libs/strings"
+	"github.com/lovercode/gopher-lua-libs/tests"
 	"github.com/stretchr/testify/assert"
-	"github.com/vadv/gopher-lua-libs/strings"
-	"github.com/vadv/gopher-lua-libs/tests"
 	"testing"
 )
 

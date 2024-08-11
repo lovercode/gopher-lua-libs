@@ -1,13 +1,13 @@
 package log
 
 import (
+	"github.com/lovercode/gopher-lua-libs/filepath"
+	"github.com/lovercode/gopher-lua-libs/strings"
+	"github.com/lovercode/gopher-lua-libs/tests"
 	"github.com/stretchr/testify/assert"
-	"github.com/vadv/gopher-lua-libs/filepath"
-	"github.com/vadv/gopher-lua-libs/strings"
-	"github.com/vadv/gopher-lua-libs/tests"
 	"testing"
 
-	ioutil "github.com/vadv/gopher-lua-libs/ioutil"
+	ioutil "github.com/lovercode/gopher-lua-libs/ioutil"
 )
 
 func TestApi(t *testing.T) {

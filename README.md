@@ -1,5 +1,5 @@
 # gopher-lua-libs
-[![GoDoc](https://godoc.org/github.com/vadv/gopher-lua-libs?status.svg)](https://godoc.org/github.com/vadv/gopher-lua-libs)
+[![GoDoc](https://godoc.org/github.com/lovercode/gopher-lua-libs?status.svg)](https://godoc.org/github.com/lovercode/gopher-lua-libs)
 
 
 Package contains is a libs for [gopher-lua](https://github.com/yuin/gopher-lua).
@@ -11,7 +11,7 @@ Development version, available on github, released under BSD 3-clause.
 ## Installation
 
 ```
-go get github.com/vadv/gopher-lua-libs
+go get github.com/lovercode/gopher-lua-libs
 ```
 
 ## Index
@@ -56,7 +56,7 @@ go get github.com/vadv/gopher-lua-libs
 
 For the quick overview you can use standalone interpreter with listed libs. Examples and documentation for modules can be found in their directories.
 ```
-go install github.com/vadv/gopher-lua-libs/cmd/glua-libs@latest
+go install github.com/lovercode/gopher-lua-libs/cmd/glua-libs@latest
 
 glua-libs example.lua
 ```
@@ -73,7 +73,7 @@ import (
         "os"
 
         lua "github.com/yuin/gopher-lua"
-        libs "github.com/vadv/gopher-lua-libs"
+        libs "github.com/lovercode/gopher-lua-libs"
 
 )
 var (

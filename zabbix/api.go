@@ -7,18 +7,19 @@ import (
 	"log"
 	"strconv"
 
-	lua_http "github.com/vadv/gopher-lua-libs/http/client/interface"
-	lua_json "github.com/vadv/gopher-lua-libs/json"
+	lua_http "github.com/lovercode/gopher-lua-libs/http/client/interface"
+	lua_json "github.com/lovercode/gopher-lua-libs/json"
 	lua "github.com/yuin/gopher-lua"
 )
 
 // NewBot lua zabbix.bot(config table, http_ud.client) return zabbix_bot_ud
-// config = {
-//    url = "http://zabbix.url",
-//    user = "user",
-//    password = "password",
-//    debug = true,
-//}
+//
+//	config = {
+//	   url = "http://zabbix.url",
+//	   user = "user",
+//	   password = "password",
+//	   debug = true,
+//	}
 func NewBot(L *lua.LState) int {
 	config := L.CheckTable(1)
 	bot := &luaBot{}

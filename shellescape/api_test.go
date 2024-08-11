@@ -1,9 +1,9 @@
 package shellescape
 
 import (
+	"github.com/lovercode/gopher-lua-libs/inspect"
+	"github.com/lovercode/gopher-lua-libs/tests"
 	"github.com/stretchr/testify/assert"
-	"github.com/vadv/gopher-lua-libs/inspect"
-	"github.com/vadv/gopher-lua-libs/tests"
 	"testing"
 )
 

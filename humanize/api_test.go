@@ -1,12 +1,12 @@
 package humanize
 
 import (
+	"github.com/lovercode/gopher-lua-libs/tests"
 	"github.com/stretchr/testify/assert"
-	"github.com/vadv/gopher-lua-libs/tests"
 	"testing"
 
-	inspect "github.com/vadv/gopher-lua-libs/inspect"
-	time "github.com/vadv/gopher-lua-libs/time"
+	inspect "github.com/lovercode/gopher-lua-libs/inspect"
+	time "github.com/lovercode/gopher-lua-libs/time"
 )
 
 func TestApi(t *testing.T) {

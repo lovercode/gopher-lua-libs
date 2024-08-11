@@ -2,7 +2,7 @@
 package ioutil
 
 import (
-	lio "github.com/vadv/gopher-lua-libs/io"
+	lio "github.com/lovercode/gopher-lua-libs/io"
 	"io"
 	"io/ioutil"
 

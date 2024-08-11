@@ -1,4 +1,4 @@
-# http [![GoDoc](https://godoc.org/github.com/vadv/gopher-lua-libs/http?status.svg)](https://godoc.org/github.com/vadv/gopher-lua-libs/http)
+# http [![GoDoc](https://godoc.org/github.com/lovercode/gopher-lua-libs/http?status.svg)](https://godoc.org/github.com/lovercode/gopher-lua-libs/http)
 
 ## Functions
 

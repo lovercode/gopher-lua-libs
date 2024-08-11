@@ -1,13 +1,13 @@
 package telegram_test
 
 import (
+	"github.com/lovercode/gopher-lua-libs/tests"
 	"github.com/stretchr/testify/assert"
-	"github.com/vadv/gopher-lua-libs/tests"
 	"testing"
 
-	http "github.com/vadv/gopher-lua-libs/http"
-	inspect "github.com/vadv/gopher-lua-libs/inspect"
-	telegram "github.com/vadv/gopher-lua-libs/telegram"
+	http "github.com/lovercode/gopher-lua-libs/http"
+	inspect "github.com/lovercode/gopher-lua-libs/inspect"
+	telegram "github.com/lovercode/gopher-lua-libs/telegram"
 )
 
 func TestApi(t *testing.T) {

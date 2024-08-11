@@ -1,4 +1,4 @@
-# db [![GoDoc](https://godoc.org/github.com/vadv/gopher-lua-libs/db?status.svg)](https://godoc.org/github.com/vadv/gopher-lua-libs/db)
+# db [![GoDoc](https://godoc.org/github.com/lovercode/gopher-lua-libs/db?status.svg)](https://godoc.org/github.com/lovercode/gopher-lua-libs/db)
 
 ## Usage
 

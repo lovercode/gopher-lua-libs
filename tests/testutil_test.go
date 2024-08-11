@@ -1,10 +1,10 @@
 package tests
 
 import (
+	"github.com/lovercode/gopher-lua-libs/goos"
+	"github.com/lovercode/gopher-lua-libs/inspect"
+	"github.com/lovercode/gopher-lua-libs/strings"
 	"github.com/stretchr/testify/assert"
-	"github.com/vadv/gopher-lua-libs/goos"
-	"github.com/vadv/gopher-lua-libs/inspect"
-	"github.com/vadv/gopher-lua-libs/strings"
 	"os"
 	"testing"
 )

@@ -1,12 +1,12 @@
 package prometheus_client_test
 
 import (
+	"github.com/lovercode/gopher-lua-libs/http"
+	prometheus "github.com/lovercode/gopher-lua-libs/prometheus/client"
+	"github.com/lovercode/gopher-lua-libs/strings"
+	"github.com/lovercode/gopher-lua-libs/tests"
+	"github.com/lovercode/gopher-lua-libs/time"
 	"github.com/stretchr/testify/assert"
-	"github.com/vadv/gopher-lua-libs/http"
-	prometheus "github.com/vadv/gopher-lua-libs/prometheus/client"
-	"github.com/vadv/gopher-lua-libs/strings"
-	"github.com/vadv/gopher-lua-libs/tests"
-	"github.com/vadv/gopher-lua-libs/time"
 	"testing"
 )
 

@@ -1,9 +1,9 @@
 package tcp
 
 import (
+	"github.com/lovercode/gopher-lua-libs/tests"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/vadv/gopher-lua-libs/tests"
 	"io"
 	"net"
 	"testing"

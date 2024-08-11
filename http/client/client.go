@@ -13,7 +13,7 @@ import (
 	"os"
 	"time"
 
-	lua_json "github.com/vadv/gopher-lua-libs/json"
+	lua_json "github.com/lovercode/gopher-lua-libs/json"
 	lua "github.com/yuin/gopher-lua"
 )
 

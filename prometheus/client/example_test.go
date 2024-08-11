@@ -3,9 +3,9 @@ package prometheus_client_test
 import (
 	"log"
 
-	"github.com/vadv/gopher-lua-libs/http"
-	prometheus "github.com/vadv/gopher-lua-libs/prometheus/client"
-	"github.com/vadv/gopher-lua-libs/time"
+	"github.com/lovercode/gopher-lua-libs/http"
+	prometheus "github.com/lovercode/gopher-lua-libs/prometheus/client"
+	"github.com/lovercode/gopher-lua-libs/time"
 	lua "github.com/yuin/gopher-lua"
 )
 

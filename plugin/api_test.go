@@ -1,13 +1,13 @@
 package plugin
 
 import (
+	"github.com/lovercode/gopher-lua-libs/inspect"
+	"github.com/lovercode/gopher-lua-libs/tests"
 	"github.com/stretchr/testify/assert"
-	"github.com/vadv/gopher-lua-libs/inspect"
-	"github.com/vadv/gopher-lua-libs/tests"
 	"testing"
 
-	ioutil "github.com/vadv/gopher-lua-libs/ioutil"
-	time "github.com/vadv/gopher-lua-libs/time"
+	ioutil "github.com/lovercode/gopher-lua-libs/ioutil"
+	time "github.com/lovercode/gopher-lua-libs/time"
 )
 
 func TestApi(t *testing.T) {

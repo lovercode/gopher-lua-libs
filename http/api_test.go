@@ -5,9 +5,9 @@ import (
 	"crypto/tls"
 	"crypto/x509"
 	"fmt"
+	"github.com/lovercode/gopher-lua-libs/tests"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/vadv/gopher-lua-libs/tests"
 	"golang.org/x/sync/errgroup"
 	"io"
 	"io/ioutil"
@@ -18,10 +18,10 @@ import (
 	"testing"
 	"time"
 
-	lua_http "github.com/vadv/gopher-lua-libs/http"
-	inspect "github.com/vadv/gopher-lua-libs/inspect"
-	plugin "github.com/vadv/gopher-lua-libs/plugin"
-	lua_time "github.com/vadv/gopher-lua-libs/time"
+	lua_http "github.com/lovercode/gopher-lua-libs/http"
+	inspect "github.com/lovercode/gopher-lua-libs/inspect"
+	plugin "github.com/lovercode/gopher-lua-libs/plugin"
+	lua_time "github.com/lovercode/gopher-lua-libs/time"
 	lua "github.com/yuin/gopher-lua"
 )
 

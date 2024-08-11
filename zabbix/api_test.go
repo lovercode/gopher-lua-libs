@@ -1,13 +1,13 @@
 package zabbix_test
 
 import (
+	"github.com/lovercode/gopher-lua-libs/tests"
 	"github.com/stretchr/testify/assert"
-	"github.com/vadv/gopher-lua-libs/tests"
 	"testing"
 
-	http "github.com/vadv/gopher-lua-libs/http"
-	inspect "github.com/vadv/gopher-lua-libs/inspect"
-	zabbix "github.com/vadv/gopher-lua-libs/zabbix"
+	http "github.com/lovercode/gopher-lua-libs/http"
+	inspect "github.com/lovercode/gopher-lua-libs/inspect"
+	zabbix "github.com/lovercode/gopher-lua-libs/zabbix"
 )
 
 func TestApi(t *testing.T) {

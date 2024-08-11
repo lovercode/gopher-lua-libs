@@ -1,4 +1,4 @@
-# prometheus [![GoDoc](https://godoc.org/github.com/vadv/gopher-lua-libs/prometheus/client?status.svg)](https://godoc.org/github.com/vadv/gopher-lua-libs/prometheus/client)
+# prometheus [![GoDoc](https://godoc.org/github.com/lovercode/gopher-lua-libs/prometheus/client?status.svg)](https://godoc.org/github.com/lovercode/gopher-lua-libs/prometheus/client)
 
 ## Usage
 

@@ -3,9 +3,9 @@ package zabbix_test
 import (
 	"log"
 
-	http "github.com/vadv/gopher-lua-libs/http"
-	inspect "github.com/vadv/gopher-lua-libs/inspect"
-	zabbix "github.com/vadv/gopher-lua-libs/zabbix"
+	http "github.com/lovercode/gopher-lua-libs/http"
+	inspect "github.com/lovercode/gopher-lua-libs/inspect"
+	zabbix "github.com/lovercode/gopher-lua-libs/zabbix"
 	lua "github.com/yuin/gopher-lua"
 )
 

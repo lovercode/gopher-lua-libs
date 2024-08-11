@@ -1,12 +1,12 @@
 package json
 
 import (
+	"github.com/lovercode/gopher-lua-libs/strings"
+	"github.com/lovercode/gopher-lua-libs/tests"
 	"github.com/stretchr/testify/assert"
-	"github.com/vadv/gopher-lua-libs/strings"
-	"github.com/vadv/gopher-lua-libs/tests"
 	"testing"
 
-	inspect "github.com/vadv/gopher-lua-libs/inspect"
+	inspect "github.com/lovercode/gopher-lua-libs/inspect"
 )
 
 func TestApi(t *testing.T) {

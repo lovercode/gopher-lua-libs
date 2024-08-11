@@ -1,4 +1,4 @@
-module github.com/vadv/gopher-lua-libs
+module github.com/lovercode/gopher-lua-libs
 
 go 1.16
 
