@@ -5,6 +5,7 @@ import (
 	"crypto/tls"
 	"crypto/x509"
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"log"
 	"net"
@@ -103,9 +104,12 @@ func New(L *lua.LState) int {
 	if L.GetTop() > 0 {
 		config = L.CheckTable(1)
 	}
+	transport := &http.Transport{}
 	var httpClient = &http.Client{
-		Timeout: DefaultTimeout,
+		Timeout:   DefaultTimeout,
+		Transport: transport,
 	}
+	fmt.Println("new client")
 	if config != nil {
 		useSock := L.GetField(config, `use_sock`)
 		sockAddr := L.GetField(config, `sock_addr`)
@@ -118,16 +122,13 @@ func New(L *lua.LState) int {
 			L.ArgError(1, "sock_addr must be string")
 		}
 		if needUseSock && len(sockAddrStr) > 0 {
-			httpClient.Transport = &http.Transport{
-				DialContext: func(ctx context.Context, network, addr string) (net.Conn, error) {
-					return net.Dial("unix", sockAddrStr.String())
-				},
+			transport.DialContext = func(ctx context.Context, network, addr string) (net.Conn, error) {
+				return net.Dial("unix", sockAddrStr.String())
 			}
 		}
 	}
 	client := &LuaClient{Client: httpClient, userAgent: DefaultUserAgent}
 	tlsConfig := &tls.Config{}
-	transport := &http.Transport{}
 	// parse env
 	if proxyEnv := os.Getenv(`HTTP_PROXY`); proxyEnv != `` {
 		proxyUrl, err := url.Parse(proxyEnv)
