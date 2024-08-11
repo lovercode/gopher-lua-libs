@@ -110,11 +110,11 @@ func New(L *lua.LState) int {
 		useSock := L.GetField(config, `use_sock`)
 		sockAddr := L.GetField(config, `sock_addr`)
 		needUseSock, ok := useSock.(lua.LBool)
-		if !ok {
+		if useSock != lua.LNil && !ok {
 			L.ArgError(1, "use_sock must be bool")
 		}
 		sockAddrStr, ok := sockAddr.(lua.LString)
-		if !ok {
+		if sockAddr != lua.LNil && !ok {
 			L.ArgError(1, "sock_addr must be string")
 		}
 		if needUseSock && len(sockAddrStr) > 0 {
